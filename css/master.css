@@ -1,0 +1,1103 @@
+:root{
+    --blue-color: #0086ff; 
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+*:focus{
+    outline: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    width: 15px;
+    
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--gray-color);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--blue-alt-color);
+}
+.page{
+    min-height: 200vh;
+    background-color: #f1f5f9;
+}
+
+/* start sidebar */
+.sidebar{
+    width: 250px;
+    height: 100vh;
+    box-shadow: 0 0 10px #ddd;
+    position: fixed;
+    z-index: 2;
+}
+.sidebar h3{
+    margin-bottom: 50px;
+}
+.sidebar h3::before,
+ .sidebar h3::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+.sidebar h3::before{
+    width: 80px;
+    height: 2px;
+    bottom: -20px;
+}
+.sidebar h3::after{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: -29px;
+    border: 4px solid white;
+}
+.sidebar ul li a{
+    transition: 0.3s;
+    margin-bottom: 5px; 
+}
+.sidebar ul li a:hover ,
+.sidebar ul li a.active {
+    background-color: #f6f6f6;
+}
+.sidebar ul li a span{
+    margin-left: 10px;
+    font-size: 14px;
+}
+@media(max-width:765px){
+    .sidebar{
+        width: 55px;
+        padding: 0px;
+    }
+    
+    .sidebar ul li a{
+        margin: -10px;
+        margin-bottom: 15px;
+    }
+    .sidebar ul li a span{
+        display: none;
+
+    }
+    .sidebar h3{
+        font-size: 11px;
+        margin-left: -13px;
+        margin-bottom: 30px;
+    }
+    .sidebar h3::after,.sidebar h3::before{
+        display: none;
+    }
+}
+/* end sidebar */
+
+/* start content */
+.content{
+    overflow: hidden;
+    padding-left: 250px;
+}
+@media(max-width:765px){
+    .content{
+        overflow: hidden;
+        padding-left: 55px;
+    }
+}
+/* start head */
+    .head{
+        padding-top: 50px;
+        height: 80px;
+        width: calc(100% - 250px);
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        
+   }
+   @media(max-width:765px){
+    .head{
+    width: calc(100% - 55px);
+    }
+   }
+    .head .search{
+        position: relative;
+        height: 45px;
+        width: 180px;
+    }
+    .head .search::before{
+       font-family: "Font Awesome 6 Free";
+       content: "\f002";
+       font-weight: 900;
+       position: absolute;
+       left: 10px;
+       top: 50%;
+       transform: translateY(-50%);
+       color: var(--gray-color);
+    }
+    .head .search input{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        padding-left: 40px;
+        transition:width,0.3s;
+    }
+    .head .search input:focus{
+        width: 200px;
+    }
+    .head .search input:focus::placeholder{
+        opacity: 0;
+    }
+
+    .head .pro-head{
+        align-items: center;
+    }
+    .head .pro-head i{
+        font-size: 25px;
+    }
+    .head .pro-head i::after{
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: var(--red-color);
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: -5px;
+
+    }
+    .head .pro-head .img-profile{
+        height: 40px;
+        width: 40px;
+        margin-left: 10px;
+    }
+/* end head */
+/* start heading pages */
+.page h1{
+    padding-left: 20px ;
+    padding-bottom: 10px;
+    position: relative;
+    padding-top: 70px;
+}
+.page h1::after,
+.page h1::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+}
+.page h1::before{
+    width: 40px;
+    background-color: black;
+}
+.page h1::after{
+    width: 80px;
+    background-color: white;
+    left: 60px;
+}
+/* end heading pages */
+/* start wrapper */
+.wrapper{
+    grid-template-columns: repeat(auto-fill,minmax(450px , 1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 15px;
+}
+@media( max-width:765px){
+    .wrapper{
+        grid-template-columns:minmax(200px , 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+/* start welcome */
+.welcome .intro img{
+    width: 150px;
+    height: 100px;
+}
+.welcome .avatar img{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: -30px;
+}
+.welcome .body{
+    margin: 20px 0;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+
+} 
+.welcome .visit{
+    width: 70px;
+    height: 30px;
+    margin: 20px 20px 40px auto;
+    transition: 0.3s;
+}
+.welcome .visit:hover{
+    background-color: var(--blue-alt-color);
+}
+/* end welcome */
+/* start quick draft */
+.quick-draft .title{
+    height: 30px;
+    margin-bottom: 20px;
+}
+.quick-draft .text-area{
+    height: 180px;
+    resize: none;
+}
+.quick-draft .save{
+    width: 70px;
+    height: 30px;
+    margin: 20px 0 20px auto;
+    transition: 0.3s;
+}
+.quick-draft .save:hover{
+    cursor: pointer;
+    background-color: var(--blue-alt-color);
+}
+/* end quick draft */
+/* start Yearly-Targets */
+.Yearly-Targets .target-row{
+
+}
+.Yearly-Targets .target-row .icon i{
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 255, 0.2);
+    color: blue;
+    display: flex;
+    justify-content: center;   
+     align-items: center;
+     font-size: 20px;
+}
+.target-row .details{
+    flex: 1;
+}
+.target-row .details .progress{
+    height: 4px;
+    background-color: rgba(0, 0, 255, 0.197);
+}
+.Yearly-Targets .target-row .details .progress > span{
+    position: absolute;
+    height: 100%;
+}
+.Yearly-Targets .target-row .details .progress > span span{
+    position: absolute;
+    right: -16px;
+    bottom: 15px;
+    color: white;
+    padding: 2px 4px;
+    font-size: 13px;
+}
+.Yearly-Targets .target-row .details .progress > .blue span::after{
+    content: "";
+    border-color: transparent;
+    border-top-color: #0086ff;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.target-row .details .progress .orange {
+    height: 4px;
+    background-color: orange;
+}
+.orange .details .progress{
+    background-color: rgb(245 158 11 / 20%);
+}
+.target-row .details .progress .orange span {
+    background-color: orange ;
+}
+.Yearly-Targets .target-row .details .progress > .orange span::after{
+    content: "";
+    border-color: transparent;
+    border-top-color: orange;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Yearly-Targets .orange .icon i{
+    background-color: rgb(245 158 11 / 20%);
+    color: orange
+    
+}
+.target-row .details .progress .green {
+    height: 4px;
+    background-color: green;
+}
+.green .details .progress{
+    background-color: rgb(34 197 94 / 20%);
+}
+.target-row .details .progress .green span {
+    background-color: green ;
+}
+.Yearly-Targets .target-row .details .progress > .green span::after{
+    content: "";
+    border-color: transparent;
+    border-top-color: green;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Yearly-Targets .green .icon i{
+    background-color: rgb(34 197 94 / 20%);
+    color: green
+}
+/* end Yearly-Targets */
+
+/* start tickets */
+.Tickets .boxs .box{
+    text-align: center;
+    width: calc(50% - 10px);
+}
+}@media(max-width:765px){
+    .Tickets .boxs .box{
+        width: 100%;
+    }
+}
+/* end tickets */
+@media(max-width:765px){
+.search-items .items{
+    color: black;
+}
+}
+/* start latest-news */
+.latest-news .news  img{
+    width: 100px;
+    height: 60px;
+}
+@media (max-width: 765px) {
+    .latest-news .news .days {
+        margin: 10px auto;
+        width: fit-content;
+    }
+}
+/* end latest-news */
+
+/* start latest-tasks */
+.latest-tasks .tasks .Attend{
+    color: #ddd;
+}
+.latest-tasks .tasks .head-attend{
+    color: #888;
+}
+.latest-tasks .tasks i:hover{
+    cursor: pointer;
+    color: red;
+
+}
+@media (max-width: 765px) {
+    .latest-tasks .tasks .info {
+      justify-content: center;
+      width: 100%;
+    }
+}
+
+
+/* end latest-tasks */
+
+
+
+/* start latest uploads */
+.latest-upload .uploads img{
+    width: 40px;
+    height: 40px;
+}
+@media (max-width: 765px) {
+    .latest-upload .uploads .mega-b {
+        margin: 10px auto;
+        width: fit-content;
+    }
+}
+/* end latest uploads */
+
+/* start Project Progress */
+.Project-Progress ul::before{
+    content: "";
+    position: absolute;
+    left: 11px;
+    width: 2px;
+    height: 190px;
+    background-color: var(--blue-color);
+}
+.Project-Progress ul li::before{
+    content: "";
+    background-color: var(--blue-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    margin-right: 20px;
+    z-index: 1    
+}
+.Project-Progress ul li.current::before {
+    animation: change-color 0.8s infinite;  
+}
+.Project-Progress ul li.not-done::before{
+    background-color: white;
+}
+.Project-Progress img{
+position: absolute;
+right: 0;
+bottom: 0;
+width: 140PX;
+opacity: 0.2;
+}
+/* end Project Progress */
+/* start reminders */
+.Reminders ul .key{
+    width: 15px;
+    height: 15px;
+}
+.Reminders ul li .blue {
+    border-left: 2px solid var(--blue-color);
+    
+}
+
+.Reminders ul li .green {
+    border-left: 2px solid var(--green-color);
+    
+}
+.Reminders ul li .orange {
+    border-left: 2px solid var(--orange-color);
+    
+}
+.Reminders ul li .red {
+    border-left: 2px solid var(--red-color);
+    
+}
+/* end reminders */
+/* start latest post */
+.Latest-Post .head img{
+    width: 50px;
+    height: 50px;
+}
+/* end latest post */
+/* start social media  */
+.social-media .icon{
+    transition: 0.5s;
+}
+.social-media .icon:hover{
+    transform: rotate(10deg);
+}
+.social-media .twitter{
+    background-color: rgb(29 161 242 / 20%);
+    color: #1da1f2;;
+}
+.social-media .youtube{
+background-color: rgb(255 0 0 / 20%);
+color: #ff0000;
+}
+.social-media .facebook {
+    background-color: rgb(24 119 242 / 20%);
+    color: #1da1f2;
+}
+.social-media .linkedin {
+    background-color: rgb(0 119 181 / 20%);
+    color: #0077b5;
+}
+/* end social media */
+
+/* start projects table */
+.projects .responsive-table{
+    overflow: auto;
+}
+.projects table{
+    min-width: 1000px;
+    border-spacing: 0;
+}
+
+.projects thead th{
+    background-color: #eee;
+    padding: 15px;
+    
+}
+.projects tbody tr{
+    transition: 0.5s;
+}
+.projects tbody tr:hover{
+    background-color: #eef;
+}
+.projects table td{
+    padding: 15px;
+}
+.projects tbody td{
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+.projects tbody td:last-child{
+    border-right: 1px solid #eee;
+}
+.projects tbody td img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.projects tbody td img:not(:first-child){
+    margin-left: -20px;
+}
+.projects tbody td span{
+    color: white;
+}
+/* end projects table */
+
+/* start animation */
+@keyframes change-color{
+    from{
+        background-color: var(--blue-color);
+    }
+    to{
+        background-color: white;
+    }
+}
+/* end animation */
+
+/* end wrapper */
+
+/* ............start settings page............ */
+.settings-page{
+    grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
+}
+@media (max-width: 765px) {
+    .settings-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-right: 10px;
+        margin-left: 10px;
+        gap: 10px;
+    }
+}
+/* start site control */
+    .site-control textarea{
+        resize: none;
+        border: 2px solid #ccc;
+    }
+
+/* end site control */
+/* <!-- start security info --> */
+.security-info .change:hover{
+    cursor: pointer;
+    background-color: #0077b5;
+}
+.security-info .devices:hover{
+    cursor: pointer;
+}
+/* <!-- end security info --> */
+/* start social info  */
+.social-info .icon{
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-right: none;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 0 0 8px;
+}
+.social-info input {
+    width: 100%;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 0 8px 8px 0;    
+}
+.social-info > div:focus-within i{
+    color: #3c3c3c;
+} 
+/* end social info */
+/* start backup manager */
+.backup-manager .servers input{
+    appearance: none;
+}
+.backup-manager .servers .server label{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.backup-manager .servers .server label:hover{
+    cursor: pointer;
+}
+.backup-manager .servers .server:hover{
+    cursor: pointer;
+}
+.backup-manager .servers > input:checked + .server {
+    color: var(--blue-color);
+    border-color: var(--blue-color);
+    border-width: 2px;
+}
+/* end backup manager */
+/* ........................end settings page................*/
+
+
+/* ..............start profile pag......... */
+.profile-page .info-card{
+    grid-template-columns: repeat(auto-fill,minmax(1000px, 1fr));
+}
+@media (max-width: 765px) {
+    .profile-page .info-card {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-right: 10px;
+        margin-left: 10px;
+        gap: 10px;
+    }
+   
+    .profile-page .sills-activities .my-skills { 
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .profile-page .sills-activities .activities{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .profile-page .sills-activities h2{
+        padding-top: 10px;
+
+    }
+    .profile-page .sills-activities .activities .activity{
+        text-align: center;
+    }
+}
+
+
+.profile-page .info-card .profile-photo{
+flex-direction: column;
+    border-right: 1px solid #eee;
+    min-width:300px;
+    height: 500px;
+}
+.profile-page .info-card .profile-photo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.profile-page .info-card .profile-photo .level{
+    height: 6px;
+    overflow: hidden;
+    width: 70%;
+}
+.profile-page .info-card .profile-photo .level span{
+    position: absolute;
+    background-color: var(--blue-color);
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.profile-page .info-card .g-info{
+    align-self:flex-start;
+    padding-bottom: 10px;
+}
+.profile-page .info-card .g-info >div {
+    min-width: 250px;
+}
+
+.profile-page .my-skills {
+    flex-grow: 1;
+
+}
+.profile-page .activities {
+    flex-grow: 4;
+
+}
+.profile-page .activities .activity img{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.profile-page .activities .activity{
+    align-items: center;
+}
+
+/* ..................end profile page..................... */
+
+/* ..................start projects page................. */
+.project-page{
+    grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
+}
+@media (max-width: 765px) {
+    .project-page .card {
+
+        grid-template-columns: minmax(500px, 1fr);
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+    .project-page .card .hash{
+        display: block;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+    .project-page .card h3{
+        padding-top: 10px;
+    }
+}
+@media (max-width: 765px) {
+    .project-page .card:nth-of-type(span){
+       margin: 10px;
+       display: block;
+    }
+}
+.project-page .card .date{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.project-page .card img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.project-page .card img:not(:first-child){
+    margin-left: -15px;
+}
+.project-page .card .prog{
+    height: 8px;
+    width: 250px;
+}
+.project-page .card .prog span{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* ..................end projects page................. */
+
+/* .............start courses page............ */
+.courses-page{
+    grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+}
+@media (max-width: 765px) {
+    .courses-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-right: 10px;
+        margin-left: 10px;
+        gap: 10px;
+    }
+    .courses-page .card .profile{
+        width: 40px;
+        height: 40px;
+    }
+   
+}
+.courses-page .card .cover{
+    max-width: 100%;
+}
+
+.courses-page .card .info {
+    position: absolute;
+    background-color: var(--blue-alt-color);
+    color: white;
+    padding: 5px 15px ;
+    border-radius: 10px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -35px;
+}
+.courses-page .card .profile{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border-radius: 50%;
+}
+/* ..........end courses page............... */
+/* .............start friends page............ */
+.friends-page{
+    grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+}
+@media (max-width: 765px) {
+    .friends-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-right: 10px;
+        margin-left: 10px;
+        gap: 10px;
+    }
+   
+}
+.friends-page .contact{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.friends-page .contact .phone , .email{
+    background-color: #eee;
+    color: gray;
+   padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.friends-page .contact .email:hover{
+    cursor: pointer;
+    background-color: var(--blue-alt-color);
+    color: white;
+}
+.friends-page .contact .phone:hover{
+    cursor: pointer;
+    background-color: var(--blue-alt-color);
+    color: white;
+}
+.friends-page .profile{
+    width: 80px;
+    height: 80px;
+}
+.friends-page .vip{
+    color: orange;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    opacity: 0.2;
+}
+.friends-page .btn{
+    padding: 3px 8px;
+}
+.friends-page .btn:hover{
+    cursor: pointer;
+}
+
+/* ...............end friends page.......... */
+/* .............start files page......... */
+.files-page .files-content{
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+}
+@media (max-width: 765px) and (min-width: 370px ) {
+    .files-page .files-content {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-right: 10px;
+        margin-left: 10px;
+        gap: 10px;
+    }
+    .files-page{
+        flex-direction: column-reverse;
+    }
+    .files-page .file-stat{
+        display: block;
+    }
+}
+@media (max-width: 370px ){
+    .files-page{
+        flex-direction: column-reverse;
+    }
+    .files-page .file-stat{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+.files-page .files-content{
+    gap: 20px;
+    flex-grow: 1;
+}
+.files-content img{
+    width: 60px;
+    height: 60px;
+}
+.files-content .card{
+    transition: 0.3s;
+}
+.files-content .card:hover img{
+    transform: rotate(10deg);
+}
+.files-page .file-stat{
+    min-width: 280px
+    ;
+}
+.files-page .file-stat{
+    height: 500px;
+}
+.files-page .file-stat .blue{
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 255, 0.15);
+    margin-right: 10px;
+}
+.files-page .file-stat .green{
+    padding: 20px 10px;
+    background-color: rgba(0, 128, 0, 0.153);
+    margin-right: 10px;
+}
+.files-page .file-stat .red{
+    padding: 20px 10px;
+    background-color: rgba(255, 0, 0, 0.155);
+    margin-right: 10px;
+}
+.files-page .file-stat .orange{
+    padding: 20px 10px;
+    background-color:rgba(255, 166, 0, 0.159);
+    margin-right: 10px;
+}
+.files-page .file-stat .upload{
+    padding: 5px 10px;
+    background-color: var(--blue-color);
+    color: white;
+    border-radius: 8px;
+    margin: 15px auto 0;
+    transition: 0.3s;
+}
+.files-page .file-stat .upload:hover{
+    background-color: var(--blue-alt-color);
+}
+.files-page .file-stat .upload:hover i {
+    animation: go-up 0.8s infinite;
+  }
+
+  @keyframes go-up {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+/* .............end files page................... */
+/* .............start plans page............. */
+.plans-page{
+    grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
+}
+@media (max-width: 765px) {
+    .plans-page  {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-right: 10px;
+        margin-left: 10px;
+        gap: 10px;
+    }
+}
+.plans-page .head-green{
+    margin: 20px;
+    background-color: var(--green-color);
+    border: 3px solid white;
+    outline: 3px solid var(--green-color);
+}
+.plans-page .head-blue{
+    margin: 20px;
+    background-color: var(--blue-color);
+    border: 3px solid white;
+    outline: 3px solid var(--blue-color);
+}
+.plans-page .head-orange{
+    margin: 20px;
+    background-color: var(--orange-color);
+    border: 3px solid white;
+    outline: 3px solid var(--orange-color);
+}
+.plans-page li .yes{
+    color:var(--green-color);
+    margin-right: 10px;
+}
+.plans-page li .no{
+    color:var(--red-color);
+    margin-right: 10px;
+}
+.plans-page li .help{
+    color: gray;
+    margin-left: auto;
+    cursor: pointer;
+}
+.plans-page .join-free{
+    background-color: var(--green-color);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 20px;
+    width: 50px;
+}
+.plans-page .join-basic{
+    background-color: var(--blue-color);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 20px;
+    width: 50px;
+}
+.plans-page .join-prem{
+    background-color: var(--orange-color);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 20px;
+    width: 50px;
+}
+.plans-page .join-free,.join-basic,.join-prem:hover{
+    cursor: pointer;
+}
+/* .............end plans page.............. */
+/* end content */
+
+/* toggele switch */
+.toggele-checkbox{
+    -webkit-appearance: none;
+    appearance:none;
+}
+.toggele-switch{
+    background-color: #ccc;
+    width: 70px;
+    height: 31px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.toggele-switch::before{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    background-color: white;
+    width: 24px;
+    height: 23px;
+    border-radius: 50%;
+    position: absolute;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 4px;
+    top: 4px;
+    transition: 0.3s;
+    color: #aaa;
+
+}
+.toggele-checkbox:checked + .toggele-switch{
+    background-color: var(--blue-color);
+}
+.toggele-checkbox:checked + .toggele-switch::before{
+    content: "\f00c";
+    color: var(--blue-color);
+    left: 42px;
+}
+/* <label>
+                    <input class="toggele-checkbox"  type="checkbox" checked>
+                    <div class="toggele-switch"></div>
+                </label> */
+
+/* end toggele */

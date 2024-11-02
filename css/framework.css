@@ -1,0 +1,318 @@
+:root{
+    --blue-color: #0086ff; 
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+
+}
+/* start display box */
+.d-block{
+    display: block;
+}
+.d-flex{
+    display: flex;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+.align-center{
+    align-items: center;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+.f-wrap{
+    flex-wrap: wrap;
+}
+.d-grid{
+    display: grid;
+}
+@media(max-width:765px){
+    .block-mobile{
+        display: block;
+    }
+}@media(max-width:765px){
+    .hide-mobile{
+        display:  none;
+    }
+}
+
+.gap-20{
+    gap: 20px;
+}
+.trans-3s{
+    transition: 0.3s;
+}
+/* end display box */
+
+/*  start colors */
+.bg-wihte{
+    background-color: white;
+}
+.bg-eee{
+    background-color: #eee;
+}
+.bg-red{
+    background-color: var(--red-color);
+}
+.bg-green{
+    background-color: var(--green-color);
+}
+.bg-blue{
+    background-color: var(--blue-color);
+}
+.bg-orange{
+    background-color: var(--orange-color);
+}
+.c-black{
+    color: black;
+}
+.c-gray{
+    color: var(--gray-color);
+}
+
+.c-green{
+    color: var(--green-color);
+}
+.c-red{
+    color: var(--red-color);
+}
+.c-blue{
+    color: var(--blue-color);
+}
+.c-white{
+    color: white;
+}
+.c-orange{
+    color: orange;
+}
+/*  end colors */
+
+/* start padding , margin*/
+.p-20{
+    padding: 20px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-5{
+    padding: 5px;
+}
+.p-3{
+    padding: 3px;
+}
+.p-0{
+    padding: 0px;
+}
+.pr-10{
+    padding-right: 10px;
+}
+.pt-15{
+    padding-top: 15px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+.pt-5{
+    padding-top: 5px;
+}
+.pt-0{
+    padding-top: 0px;
+}
+.pr-20{
+    padding-right: 20px;
+}
+.pb-0{
+    padding-bottom: 0px;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+.pb-15{
+    padding-bottom: 15px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.pb-25{
+    padding-bottom: 25px;
+}
+.pb-35{
+    padding-bottom: 35px;
+}
+.pl-20{
+    padding-left: 20px;
+}
+.pl-10{
+    padding-left: 10px;
+}
+.m-20{
+    margin: 20px;
+}
+.m-5{
+    margin: 5px;
+}
+.m-10{
+    margin: 10px;
+}
+.mt-0{
+    margin-top: 0;
+}
+.mt--20{
+    margin-top: -20px;
+}
+.mt--15{
+    margin-top: -15px;
+}
+.mt--10{
+    margin-top: -10px;
+}
+.mt--5{
+    margin-top: -5px;
+}
+.mt--3{
+    margin-top: -3px;
+}
+.mt--2{
+    margin-top: -2px;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+.mb-0{
+    margin-bottom: 0px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-25{
+    margin-bottom: 25px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+.ml-30{
+    margin-left: 30px;
+}
+/* end padding , magin*/
+
+/* start position  */
+.p-relative{
+    position: relative;
+}
+.fixed{
+    position: fixed;
+    
+}
+/* end position  */
+
+/* start fonts */
+.text-center{
+    text-align: center;
+}
+@media(max-width:765px){
+    .text-c-mobile{
+        text-align: center;
+    }
+}
+
+.f-size-14{
+    font-size: 14px;
+}
+.f-size-25{
+    font-size: 25px;
+}
+.f-size-16{
+    font-size: 16px;
+}
+.f-size-30{
+    font-size: 30px;
+}
+.fw-bold{
+
+    font-weight: bold;
+}
+.td-line-th{
+    text-decoration: line-through;
+}
+/* end fonts */
+
+/* start border  */
+.bord-solid{
+    border: 1px solid #ccc;
+}
+.b-none{
+    border: none;
+}
+.radius-6{
+    border-radius: 6px;
+}
+.radius-10{
+    border-radius: 10px;
+}
+.rad-50{
+    border-radius: 50%;
+
+}
+.bord-b{
+    border-bottom: 1px solid #eee;
+}
+
+/* end border  */
+
+/* start width and height */
+
+.w-full{
+    width: 100%;
+}
+.w-fit{
+    width: fit-content;
+}
+/* end width and height */
+
+
+/* start component */
+.between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.center-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end component */
+
